@@ -1,0 +1,44 @@
+<div class="modal fade" id="miModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <form role="form" method="POST" action="{% url 'add_investigator' %}"> {% csrf_token %}
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Datos del nuevo usuario</h4>
+        </div>   
+        <div class="modal-body" style="min-height: 350px;" >
+          <div class="form-group" style="padding-bottom: 15px;">
+            <div class="col-sm-6 b-r">          
+              <div class="form-group">
+                <label>Nombre</label>
+                <input type="text" class="form-control" name="inv_name">
+              </div>
+              <div class="form-group">
+                <label>Apellido (s)</label>
+                <input type="text" class="form-control" name="inv_lastname">
+              </div>
+              <div class="form-group">
+                <label>Correo electr&oacute;nico</label>
+                <input type="email" class="form-control" name="inv_email">
+              </div>                
+            </div>
+            <div class="col-sm-6">          
+              <div class="form-group" style="padding-top: 30%;">
+                <label>Nombre de usuario</label>
+                <input type="text" class="form-control" name="inv_username">
+              </div>          
+              <div class="form-group">
+                <label>Contrase&ntilde;a</label>
+                <input type="password" class="form-control" name="inv_userpassword">
+              </div>       
+            </div>
+          </div>
+        </div>     
+        <div class="modal-footer">
+          <a href="#" class="btn btn-default" data-dismiss="modal">Cancelar</a>
+          <button type="submit" class="btn btn-primary">Aceptar</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </form> 
+  </div><!-- /.modal-dialog -->
+</div>

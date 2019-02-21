@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block header_content %}
+   <!-- <header class="bg-dark dk header navbar navbar-fixed-top-xs" style="background-color: #25313e;">
+      <div class="navbar-header aside-md">
+        <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen,open" data-target="#nav,html">
+          <i class="fa fa-bars"></i>
+        </a>
+        <a href="#" class="navbar-brand" data-toggle="fullscreen"><img src="images/logo.png" class="m-r-sm">Notebook</a>
+      </div>
+      <ul class="nav navbar-nav navbar-right m-n hidden-xs nav-user">  
+		<li class="hidden-xs">
+          <a href="#" class="dropdown-toggle dk" data-toggle="dropdown">
+            <i class="fa fa-facebook fa-2x"></i>            
+          </a>	
+		</li> 
+		<li class="hidden-xs">
+          <a href="#" class="dropdown-toggle dk" data-toggle="dropdown">
+            <i class="fa fa-twitter fa-2x"></i>            
+          </a>	
+		</li> 
+		<li class="hidden-xs">
+          <a href="#" class="dropdown-toggle dk" data-toggle="dropdown">
+            <i class="fa fa-github fa-2x"></i>            
+          </a>	
+		</li> 
+      </ul>
+   </header> -->
+{% endblock %}
+
+{% block body_content %}
+    <section>
+      <section class="hbox stretch">
+        <section id="content">						
+					<div class="row">
+						<!-- LEFT SIDE-->
+						<div class="col-md-7 bg-primary-b" style=" height: 1024px;">
+							
+						</div>
+
+						<!-- RIGHT SIDE-->
+						<div class="col-md-4" style="padding-top: 25%;">	
+							<span class="text-light" style="font-size: 50px;">WRF|</span>
+							<form id="login-form" method="POST" action="{% url 'login' %}" data-validate="parsley">{% csrf_token %}
+								<div class="row" style="padding-top: 2rem;">
+									<div class="col-md-6">												
+										<input id="login-input" placeholder="Nombre de usuario" name="username" type="text" class="form-control parsley-validated" data-required="true">                        
+									</div>
+									<div class="col-md-6">												
+										<input id="login-input" placeholder="Contrase&ntilde;a" name="password" type="password" class="form-control parsley-validated" data-required="true" id="pwd">    
+									</div>	
+								</div>	
+								<div class="row text-right" style="padding-top: 30px; padding-right: 15px;">										
+									<div class="form-group">	
+										<button type="button" data-toggle="modal" data-target="#miModal" class="btn btn-warning btn-s-xs" style="margin-right: 10px;">Crear perfil</button>
+										<button type="submit" class="btn btn-primary btn-s-xs">Entrar</button>
+									</div> 
+								</div>		
+							</form>
+						</div>
+						
+					</div>		 			
+				</section>
+      </section>
+    </section>
+	</section>
+ss{% endblock %}

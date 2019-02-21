@@ -1,0 +1,105 @@
+{% extends 'main.html' %}
+{% load staticfiles %}
+
+{% block contenido %}
+<section id="content">
+  <section class="vbox">
+    <section>
+      <section class="hbox stretch">
+        <section>
+          <section class="vbox">
+            <header class="header bg-white b-b b-light">                
+              <div class="row" style="padding-top: 10px;">
+                <div class="col-sm-4 m-b-xs" style="padding-top: 5px;">
+                  <p>Configuraci&oacute;n</p>
+                </div>
+                <div class="col-sm-8 m-b-xs">
+                  <a href="#" class="btn btn-sm btn-default">
+                    <i class="fa fa-arrow-circle-o-up"></i> Importar
+                  </a>                 
+                </div>
+              </div>
+            </header>
+            
+            <section class="scrollable wrapper">
+                
+                    <section class="vbox">
+                      <header class="header bg-light bg-gradient">
+                        <ul class="nav nav-tabs nav-white">
+                          <li class="active"><a href="#activity" data-toggle="tab">Usuarios</a></li>
+                          <li class=""><a href="#events" data-toggle="tab">Base de Datos</a></li>
+                          <li class=""><a href="#interaction" data-toggle="tab">Tareas</a></li>
+                        </ul>
+                      </header>
+                      <section class="scrollable">
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="activity">
+                            <div class="text-center wrapper">
+                              <i class="fa fa-spinner fa fa-spin fa fa-large"></i>
+                            </div>
+                          </div>
+                          <div class="tab-pane" id="events">
+                            <div class="text-center wrapper">
+                              <i class="fa fa-spinner fa fa-spin fa fa-large"></i>
+                            </div>
+                          </div>
+                          <div class="tab-pane" id="interaction">
+                            <div class="text-center wrapper">
+                              <i class="fa fa-spinner fa fa-spin fa fa-large"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                    </section>
+                 
+              <!--
+              <div class="row">
+                
+                
+                
+              
+                <div class="col-lg-6 col-md-6">
+                  <section class="panel panel-default" style="margin: 60px;">
+                    <div class="panel-body">
+                      <div class="clearfix text-center m-t">
+                        <div class="inline">                     
+                          <i class="fa fa-arrow-circle-o-up fa-5x text-primary" style="font-size: 150px; margin: 50px;"></i>                        
+                        </div>                      
+                      </div>
+                    </div>
+                    <a href="#">
+                      <footer class="panel-footer bg-dark text-center">                    
+                        <h3>IMPORTAR</h3>             
+                      </footer>
+                    </a>
+                  </section>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                  <section class="panel panel-default" style="margin: 60px;">
+                    <div class="panel-body">
+                      <div class="clearfix text-center m-t">
+                        <div class="inline">                     
+                          <i class="fa fa-arrow-circle-o-down fa-5x text-primary" style="font-size: 150px; margin: 50px;"></i>                        
+                        </div>                      
+                      </div>
+                    </div>
+                    <a href="#">
+                      <footer class="panel-footer bg-dark text-center">                    
+                        <h3>EXPORTAR</h3>             
+                      </footer>
+                    </a>
+                  </section>
+                </div>
+              </div>-->
+            </section>                    
+            <footer class="footer bg-white b-t b-light">
+              <p>This is a footer</p>
+            </footer>
+          </section>
+        </section>      
+      </section>              
+    </section>
+  </section>
+  <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen" data-target="#nav"></a>
+</section>    
+{% endblock %}

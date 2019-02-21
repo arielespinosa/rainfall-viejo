@@ -1,0 +1,88 @@
+{% extends 'main.html' %}
+{% load staticfiles %}
+
+{% block contenido %}
+
+<section id="content">
+  <section class="vbox">
+    <section>
+      <section class="hbox stretch">
+        <section>
+          <section class="vbox">
+            <header class="header bg-white b-b b-light">                
+              <div class="row" style="padding-top: 10px;">
+                <div class="col-sm-4 m-b-xs" style="padding-top: 5px;">
+                  <p>Configuraci&oacute;n / Datos / SisPI</p>
+                </div>
+                <div class="col-sm-4 m-b-xs">                  
+                </div>
+                <div class="col-sm-4 m-b-xs">                 
+                </div>
+              </div>
+            </header>
+            
+            <section class="scrollable wrapper">
+              <!-- Primera fila-->
+              <div class="row">
+                <div class="col-md-6">
+                  <h4 class="m-t-xs">                      
+                    <i class="fa fa-folder-open-o">      
+                    </i> Ruta de las salidas del modelo WRF                      
+                  </h4>
+                  <div class="radio">
+                    <label class="radio-custom">
+                      <input type="radio" name="radio" checked="checked">
+                      <i class="fa fa-circle-o checked"></i>
+                      Esta es la ruta 1
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label class="radio-custom">
+                      <input type="radio" name="radio">
+                      <i class="fa fa-circle-o"></i>
+                      Esta es la ruta 2
+                    </label>
+                  </div>                                                    
+                </div>
+                <div class="col-md-6">
+                </div>
+              </div>  
+              <!-- Fin de la primera fila-->
+              <!-- Segunda fila-->
+              <div class="row">
+                <div class="col-md-6">
+                  <h4 class="m-t-xs">                      
+                    <i class="fa fa-font">      
+                    </i> Formato del nombre de los ficheros                       
+                  </h4>
+                  <div class="radio">
+                    <label class="radio-custom">
+                      <input type="radio" name="radio2" checked="checked">
+                      <i class="fa fa-circle-o checked"></i>
+                      Este es el formato 1
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label class="radio-custom">
+                      <input type="radio" name="radio2">
+                      <i class="fa fa-circle-o"></i>
+                      Este es el formato 2
+                    </label>
+                  </div> 
+                </div>                   
+                <div class="col-md-6">
+                </div>
+              </div>  
+              <!-- Fin de la segunda fila-->
+            </section>                    
+            <footer class="footer bg-white b-t b-light">
+              <p>This is a footer</p>
+            </footer>
+          </section>
+        </section>      
+      </section>              
+    </section>
+  </section>
+  <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen" data-target="#nav"></a>
+</section>
+{% endblock %}

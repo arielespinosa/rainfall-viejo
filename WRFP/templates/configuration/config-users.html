@@ -1,0 +1,112 @@
+{% extends 'main.html' %}
+{% load staticfiles %}
+
+{% block contenido %}
+{% include 'add-user.html' %}
+<section id="content">
+  <section class="vbox">
+    <section>
+      <section class="hbox stretch">
+        <section>
+          <section class="vbox">
+            <header class="header bg-white b-b b-light">                
+              <div class="row" style="padding-top: 10px;">
+                <div class="col-sm-4 m-b-xs" style="padding-top: 5px;">
+                  <p>Configuraci&oacute;n / Usuarios</p>
+                </div>
+                <div class="col-sm-4 m-b-xs">                 
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-default" title="Refresh"><i class="fa fa-refresh"></i></button>
+                    <button type="button" class="btn btn-sm btn-default" title="Remove"><i class="fa fa-trash-o"></i></button>
+                    <button type="button" class="btn btn-sm btn-default" title="Filter" data-toggle="dropdown"><i class="fa fa-filter"></i> <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Action</a></li>
+                      <li><a href="#">Another action</a></li>
+                      <li><a href="#">Something else here</a></li>
+                      <li class="divider"></li>
+                      <li><a href="#">Separated link</a></li>
+                    </ul>
+                  </div>
+                  <a href="#" data-toggle="modal" data-target="#miModal" class="btn btn-sm btn-default"><i class="fa fa-plus"></i> Create</a>
+                </div>
+                <div class="col-sm-4 m-b-xs">
+                  <div class="input-group">
+                    <input type="text" class="input-sm form-control" placeholder="Search">
+                    <span class="input-group-btn">
+                      <button class="btn btn-sm btn-default" type="button">Go!</button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </header>
+            
+            <section class="scrollable wrapper">
+                <div class="row" style="padding-top: 25px;">              
+                    <div class="col-md-4">
+                      <section class="panel panel-default">
+                        <header class="panel-heading font-bold">
+                          <ul class="nav nav-pills pull-right">
+                            <li>
+                              <a href="#" class="panel-toggle text-muted"><i class="fa fa-search-minus text-active"></i><i class="fa fa-search text"></i></a>
+                            </li>
+                          </ul>   
+                          Usuarios</header>    
+                        <div class="panel-body clearfis collapse" >
+                          <div>
+                              <input type="text" class="form-control rounded" placeholder="Escriba el nombre...">
+                          </div>                            
+                        </div>
+                        <ul class="list-group alt">
+                        <li class="list-group-item">
+                            <div class="media">
+                              <span class="pull-left thumb-sm"><img src="{% static 'images/avatar.jpg' %}" class="img-circle"></span>
+                              <div class="media-body">
+                                <div><a id="inv-{{ user.investigator.pk }}" href="#">{{ user.investigator.FullName }}</a></div>
+                                <small class="text-muted">&Uacute;ltimo acceso {{ user.last_login }}</small>
+                              </div>
+                            </div>
+                          </li>
+                          {% for investigator in investigators %}
+                            <li class="list-group-item">
+                              <div class="media">
+                                <span class="pull-left thumb-sm"><img src="{% static 'images/avatar.jpg' %}" class="img-circle"></span>
+                                <div id="user-status" class="pull-right text-success m-t-sm">
+                                {% if investigator.user.is_active %}
+                                <i cursor="handle" id="{{ investigator.user.pk }}-{{ investigator.user.is_active }}" class="fa fa-circle text-success" 
+                                data-toggle="tooltip" data-placement="top" title="Desactivar"></i>
+                                {% else %}
+                                <i cursor="handle" id="{{ investigator.user.pk }}-{{ investigator.user.is_active }}" class="fa fa-circle text-danger"
+                                data-toggle="tooltip" data-placement="top" title="Activar"></i>
+                                {% endif %}                   
+                                  
+                                </div>
+                                <div class="media-body">
+                                  <div><a id="inv-{{ investigator.pk }}" href="#">{{ investigator.FullName }}</a></div>
+                                  {% if investigator.user.last_login is not None %}
+                                  <small class="text-muted">&Uacute;ltimo acceso {{ investigator.user.last_login }}</small>
+                                  {% else %}
+                                  <small class="text-muted">Sin iniciar sesi&oacute;n</small> 
+                                  {% endif %}
+                                </div>
+                              </div>
+                            </li>
+                          {% endfor %}             
+                        </ul>
+                      </section>
+                    </div>
+                    <div class="col-md-8">
+                      {% include 'investigator-profile.html' %}
+                    </div>    
+                  </div> 
+            </section>                    
+            <footer class="footer bg-white b-t b-light">
+              <p>This is a footer</p>
+            </footer>
+          </section>
+        </section>      
+      </section>              
+    </section>
+  </section>
+  <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen" data-target="#nav"></a>
+</section>    
+{% endblock %}

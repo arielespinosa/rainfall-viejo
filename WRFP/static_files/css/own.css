@@ -1,0 +1,89 @@
+
+html{
+    font-family: Helvetica, arial, sans-serif; color:#333; font-size:12px;
+}
+
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    background-color: transparent;
+    background-image: none;
+    color: #fff;
+}
+
+.bg-dark.dker, .bg-dark .dker {
+    background-color: #25313e;
+}
+
+.bg-primary-b {
+    background-color: #428bca;
+}
+
+.btn-primary-b {
+    color: #fff;
+    background-color: #428bca;
+    border-color: #357ebd;
+}
+
+.bg-dark #nav > li > a:hover, .bg-dark #nav > li > a:focus {
+    background-color: #65bd77;
+}
+
+.animated{
+	-webkit-animation-duration:0.5s;
+	-moz-animation-duration:0.5s;
+	-ms-animation-duration:0.5s;
+	-o-animation-duration:0.5s;
+    animation-duration:0.5s;
+}
+
+.required{
+    color: #ff5f5f !important;
+}
+
+svg > g > path:d{
+    background-color: #ff5f5f !important;
+}
+
+.nav-primary ul.nav > li > a{
+    border-top: none;    
+}
+
+.nav-primary .sc li > a > i {
+    border-right: none;
+    margin-left: 1px;
+}
+
+.nav-primary .tr li > a > i {
+    border-right: none;
+    margin-left: 16px;
+}
+
+.nav-primary {
+    border-bottom: none;
+}
+
+#config-action-menu{
+    font-size: 20px;
+    min-height: 50px;
+    padding: 10px;
+}
+
+.bg-light .nav-primary ul.nav > li > a{
+    border: none;
+}
+
+.nav-primary li > a > i{
+    border: none;
+}
+
+
+.bg-light .nav-primary ul.nav.lt > li > a{
+    padding-left: 35px;
+}
+
+a:hover, a:focus {
+    font-weight: 700;
+}
+    
+
+/*---------------------RNA template---------------------*/

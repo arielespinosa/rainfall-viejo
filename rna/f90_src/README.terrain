@@ -1,0 +1,7 @@
+
+This directory contains source code for ARPSTERN, a program for creating
+a terrain file from terrain data base.
+ 
+Doing 'makearps arpstern' in arps root directory compiles and links this package.
+makearps -ncarg arpstern will turn on plotting using NCAR graphics.
+
